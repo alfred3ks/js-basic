@@ -73,3 +73,8 @@ console.log(listOrdenada);
 const studensSort = students.sort((a,b)=>a.age < b.age ? 1 : -1);
 
 console.log(studensSort);
+
+// Tambien se puede hacer con la resta:
+const studensSort1 = students.sort((a,b)=>b.age - a.age);
+console.log('--');
+console.log(studensSort1);
