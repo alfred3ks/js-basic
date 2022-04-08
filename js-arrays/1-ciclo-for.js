@@ -27,46 +27,46 @@ array.forEach((element, index, elements) => {
 
 // Objeto de estudiantes:
 const students = [
-    {
-        name: "Jill",
-        lastname: "Doe",
-        age: 23,
-        course: "Marketing",
-    },
-    {
-        name: "John",
-        lastname: "Doe",
-        age: 20,
-        course: "Web Development",
-    },
-    {
-        name: "Jack",
-        lastname: "Doe",
-        age: 22,
-        course: "Accounting",
-    },
-    {
-        name: "Ryan",
-        lastname: "Ray",
-        age: 20,
-        course: "Web Development",
-    },
-    {
-        name: "Jane",
-        lastname: "Doe",
-        age: 21,
-        course: "Financial Management",
-    },
+  {
+    name: "Jill",
+    lastname: "Doe",
+    age: 23,
+    course: "Marketing",
+  },
+  {
+    name: "John",
+    lastname: "Doe",
+    age: 20,
+    course: "Web Development",
+  },
+  {
+    name: "Jack",
+    lastname: "Doe",
+    age: 22,
+    course: "Accounting",
+  },
+  {
+    name: "Ryan",
+    lastname: "Ray",
+    age: 20,
+    course: "Web Development",
+  },
+  {
+    name: "Jane",
+    lastname: "Doe",
+    age: 21,
+    course: "Financial Management",
+  },
 ];
 
 // Sintaxis básica:
-for(let i =0; i<students.length; i++){
-    // console.log(students[i]);
-    // console.log(students[i].name);
-    // console.log(students);
+for (let i = 0; i < students.length; i++) {
+  // console.log(students[i]);
+  // console.log(students[i].name);
+  // console.log(students);
 }
 
-console.log('----------------');
+console.log("----------------");
 
 /* Sintaxis declarativa:
 
@@ -75,14 +75,24 @@ OJO el metodo forEach() no retorna nada, osea que si necesitamos trabajar con el
 */
 const studentCouse = [];
 
-students.forEach((student, index, students)=>{
-    // console.log(student);
-    // console.log(index);
-    // console.log(students);
-    // console.log(`name: ${student.name}`);
-    // console.log(`course: ${student.course}`);
-    // console.log(`${student.name} ${student.lastname} ${student.course}`);
-    studentCouse.push(student.name + ' ' + student.course)
+students.forEach((student, index, students) => {
+  // console.log(student);
+  // console.log(index);
+  // console.log(students);
+  // console.log(`name: ${student.name}`);
+  // console.log(`course: ${student.course}`);
+  // console.log(`${student.name} ${student.lastname} ${student.course}`);
+    studentCouse.push(student.name + " " + student.course);
 });
 
 console.log(studentCouse);
+
+/*
+Podemos comprobar si un metodo devuelve a no valor poniendolo dentro de una variable asi:
+
+*/
+let result = students.forEach((student, index, students) => {
+    return student.name;
+});
+
+console.log(result); // undefined
