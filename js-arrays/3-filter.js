@@ -1,4 +1,5 @@
 /*
+
 Metodo filter():
 El método filter() crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.
 
@@ -42,7 +43,7 @@ const students = [
 ];
 
 const developer = students.filter(student => {
-    if (student.course === 'Web Development'){
+    if (student.course === 'Web Development') {
         return student;
     }
 });
@@ -50,12 +51,12 @@ const developer = students.filter(student => {
 console.log(developer);
 
 // Podemos encadenar metodos:
-const developer1 = students.filter(student => {
-    if (student.course === 'Web Development'){
+const result = students.filter(student => {
+    if (student.course === 'Web Development') {
         return true;
     }
-}).map(student =>{
+}).map(student => {
     return student.name;
 })
 
-console.log(developer1);
+console.log(result);
