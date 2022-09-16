@@ -1,4 +1,5 @@
 /*
+
 Metodo every();
 
 Determina si todos los elementos en el array satisfacen una condición.
@@ -12,8 +13,8 @@ arr.every(callback(element[, index[, array]])[, thisArg])
 
 */
 
-const lista = [3,6];
-const everyList = lista.every((elem, )=>{
+const lista = [3, 6];
+const everyList = lista.every((elem,) => {
     return elem >= 3;
 });
 
@@ -53,14 +54,14 @@ const students = [
 ];
 
 console.log(
-    students.every((student)=>{
-    return  student.age === 20;
-})
+    students.every((student) => {
+        return student.age === 20;
+    })
 );
 // Retorna false porque revisa dentro del array si algun elemento no cumple la condicion devuelve false.
 
 console.log(
-    students.every((student)=>{
+    students.every((student) => {
         return student.name.includes('J');
     })
 );

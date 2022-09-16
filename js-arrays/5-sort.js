@@ -1,4 +1,5 @@
 /*
+
 Ahora vamos a ver el metodo sort().
 
 El método sort() ordena los elementos de un arreglo (array) localmente y devuelve el arreglo ordenado. La ordenación no es necesariamente estable. El modo de ordenación por defecto responde a la posición del valor del string de acuerdo a su valor Unicode.
@@ -44,8 +45,8 @@ const students = [
 
 // Vamos a ordenar el objeto, le debemos pasar a la funcion callback dos elementos que ella debe comparar
 
-const sortedStudens = students.sort((first,second)=>{
-    if(first.age < second.age){
+const sortedStudens = students.sort((first, second) => {
+    if (first.age < second.age) {
         return 1;
     } else {
         return -1;
@@ -55,7 +56,7 @@ const sortedStudens = students.sort((first,second)=>{
 console.log(sortedStudens);
 
 // Vemos otro ejemplo con numeros:
-const list = [2,4,5,1,7,90,45,54,23,55,11,09,0];
+const list = [2, 4, 5, 1, 7, 90, 45, 54, 23, 55, 11, 09, 0];
 
 // const listOrdenada = list.sort((a, b)=>{
 //     if(a < b){
@@ -65,16 +66,16 @@ const list = [2,4,5,1,7,90,45,54,23,55,11,09,0];
 //     }
 // })
 
-const listOrdenada = list.sort((a, b)=> a < b ? 1 : -1);
+const listOrdenada = list.sort((a, b) => a < b ? 1 : -1);
 
 console.log(listOrdenada);
 
 // Vamos a utilizar el operador ternario:
-const studensSort = students.sort((a,b)=>a.age < b.age ? 1 : -1);
+const studensSort = students.sort((a, b) => a.age < b.age ? 1 : -1);
 
 console.log(studensSort);
 
-// Tambien se puede hacer con la resta:
-const studensSort1 = students.sort((a,b)=>b.age - a.age);
+// Tambien se puede hacer con la resta: La edad menor que otra.
+const studensSort1 = students.sort((a, b) => b.age - a.age);
 console.log('--');
 console.log(studensSort1);

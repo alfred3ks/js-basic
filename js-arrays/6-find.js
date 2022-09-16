@@ -1,4 +1,5 @@
 /*
+
 El método find() devuelve el valor del primer elemento del array que cumple la función de prueba proporcionada.
 
 Sintaxis:
@@ -42,9 +43,9 @@ const students = [
 ];
 
 // Vamos a buscar un objeto en el arreglo:
-findStuden = students.find((student)=>{
-    if (student.age === 20){
-        return 1 ;
+findStuden = students.find((student) => {
+    if (student.age === 20) {
+        return 1;
     }
 })
 

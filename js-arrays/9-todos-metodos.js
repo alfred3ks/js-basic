@@ -1,5 +1,7 @@
 /*
+
 Vamos a utilizar todos los metodos vistos:
+
 */
 
 const students = [
@@ -37,20 +39,20 @@ const students = [
 
 
 // Destructuracion de objetos:
-const result = students.map(({name, lastname, age})=>{
+const result = students.map(({ name, lastname, age }) => {
     return {
         student: `${name} ${lastname}`,
         age
     }
-}).filter((student)=>{
-    if(student.age > 20){
+}).filter((student) => {
+    if (student.age > 20) {
         return student
     }
-}).sort((a,b)=>{
-    if(a.age - b.age ){
+}).sort((a, b) => {
+    if (a.age - b.age) {
         return -1
     }
-}).reduce((total, student)=> total + student.age, 0
+}).reduce((total, student) => total + student.age, 0
 )
 
 console.log(result);

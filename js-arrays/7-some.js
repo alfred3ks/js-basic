@@ -1,4 +1,5 @@
 /*
+
 El método some() comprueba si al menos un elemento del array cumple con la condición implementada por la función proporcionada.
 
 
@@ -45,8 +46,8 @@ const students = [
 ];
 
 // Apliquemos el metodo:
-const studentsSome = students.some((student)=>{
-    if(student.age < 24){
+const studentsSome = students.some((student) => {
+    if (student.age < 24) {
         return true;
     }
 })
@@ -54,7 +55,7 @@ const studentsSome = students.some((student)=>{
 console.log(studentsSome);
 
 // Podemos usar los condicionales que queramos. Aunque no es necesario usar siempre el condicional if, veamos.
-const studentSome = students.some((student)=>{
+const studentSome = students.some((student) => {
     return student.lastname === 'Perez';
 });
 
