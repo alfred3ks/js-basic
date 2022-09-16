@@ -1,16 +1,23 @@
 /*
+Tambien podemos recorrer un array usando el metodo map().
+
 Metodo map():
-El método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos. Es muy parecido a ciclo for o foreach() pero a diferencia que este si nos retorna un arreglo nuevo.
+
+El método map() retorna un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos. Es muy parecido a ciclo for o foreach() pero a diferencia que este si nos retorna un arreglo nuevo.
 
 Sintaxis:
-let nuevo_array = arr.map(function callback(currentValue, index, array) {
-    // Elemento devuelto de nuevo_array
-}[, thisArg])
 
-array.map();
+    let nuevo_array = arr.map(function callback(currentValue, index, array) {
+        // Elemento devuelto de nuevo_array
+    }[, thisArg])
+
+    array.map();
 
 Esta manera de trabajar con los arrays es muy utilizado por frameworks como ReactJS, Angular, etc.
+
 */
+
+// Tenemos un array de objetos de estudiantes.
 
 const students = [
     {
@@ -45,21 +52,18 @@ const students = [
     },
 ];
 
-students.map((student)=>{
-    // console.log(student);
-    // student.name;
+students.map((student) => {
+    console.log(student);
+    student.name;
 })
 
-const result = students.map((student)=>{
+const result = students.map((student) => {
     return student;
 });
 
 console.log(result);
 
-// let fullName = students.map((student) => {
-//     return student.name + ' ' + student.lastname;
-// });
-const fullName = students.map( student => {
+const fullName = students.map(student => {
     return student.name + ' ' + student.lastname;
 });
 
@@ -69,7 +73,7 @@ console.log(fullName);
 const names = students.map(student => {
     return {
         fullname: student.name + ' ' + student.lastname,
-        age:student.age,
+        age: student.age,
         course: student.course
     }
 })
@@ -88,9 +92,9 @@ console.log(newCurses);
 console.log(students);
 
 /*
+
 El metodo map() no altera nuestro array original, ya que lo que hacemos es generar uno nuevo. OJO con eso.
 
-
 Podemos manipular un arreglo en funcion de lo que necesitemos, es muy muy interesante. Ya toca practicar!!!! vamos!!!
-*/
 
+*/
