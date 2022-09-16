@@ -1,4 +1,5 @@
 /*
+
 Metodo reduce():
 
 El método reduce() ejecuta una función reductora sobre cada elemento de un array, devolviendo como resultado un único valor.
@@ -19,8 +20,10 @@ El índice del elemento actual que está siendo procesado en el array. Empieza d
 array Opcional:
 El array sobre el cual se llamó el método reduce().
 valorInicial Opcional:
-Un valor a usar como primer argumento en la primera llamada de la función callback. Si no se proporciona el valorInicial, el primer elemento del array será utilizado y saltado. Llamando a reduce() sobre un array vacío sin un valorInicial lanzará un TypeError.
-Descripción
+Un valor a usar como primer argumento en la primera llamada de la función callback. Si no se proporciona el valorInicial, el primer elemento del array será utilizado y saltado.
+
+Llamando a reduce() sobre un array vacío sin un valorInicial lanzará un TypeError.Descripción
+
 */
 
 const students = [
@@ -59,7 +62,7 @@ const students = [
 // Vamos a obtener la suma de todas las edades:
 // Ciclo for() no es idela
 let total = 0;
-for(let i = 0; i < students.length; i++){
+for (let i = 0; i < students.length; i++) {
     total += students[i].age;
     // console.log(total);
 }
@@ -67,7 +70,7 @@ for(let i = 0; i < students.length; i++){
 console.log(total);
 
 // Metodo reduce()
-let result = students.reduce((total, student)=>{
+let result = students.reduce((total, student) => {
     return total + student.age;
 }, 0)
 
@@ -97,17 +100,19 @@ const developers = [
     },
 ];
 
-const reducer = developers.reduce((allSkills, student )=> {
+const reducer = developers.reduce((allSkills, student) => {
     return Array.from(new Set([...allSkills, ...student.skills]))
-},[])
+}, [])
 
 console.log(reducer);
 
 /*
+
 Aqui hemos aprendido como con el objeto Set():
 El objeto Set permite almacenar valores únicos de cualquier tipo, incluso valores primitivos u referencias a objetos. Nos permite guardar todos los elementos que no se repiten. Si alguno se repite lo descarta.
 
 Tambien hemos visto como ese objeto se puede transformar en un Array con el metodo Array.from()
 
 Debemos profundizar mas en estos metodos porque se ven muy interesante.
+
 */
