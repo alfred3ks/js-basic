@@ -1,31 +1,35 @@
 /*
+
 Formas de recorrer un array:
-Existen 5 formas de recorrer un array:
+Existen varias formas de recorrer un array:
 - ciclo for,
 - ciclo forEach(),
 - ciclo while,
 - ciclo do while,
 - usando metodo map(),
 
-Ciclo For:
+Vamos a ver como lo haremos con el ciclo For:
 Sintaxis básica:
-for ([expresion-inicial]; [condicion]; [expresion-final]){
-    code...
-}
 
-Sintaxis declarativa:
+  for ([expresion-inicial]; [condicion]; [expresion-final]){
+      code...
+  }
+
+Sintaxis declarativa. Usando el metodo .forEach():
+
 Metodo .forEach(), metodo que nos permite recorrer un arreglo. Este metodo recibe un funcion como callback una funcion, dicha funcion recibe por 3 parametros opcionales, usaremos el que mas nos interese:
 
-array.forEach((element, index, elements) => {
-    //code..
-    console.log(element);
-    console.log(index);
-    console.log(elements);
-});
+  array.forEach((element, index, elements) => {
+      //code..
+      console.log(element);
+      console.log(index);
+      console.log(elements);
+  });
 
 */
 
-// Objeto de estudiantes:
+// Veamos un ejemplo: Tenemos un arrays de objeto de estudiantes:
+
 const students = [
   {
     name: "Jill",
@@ -59,40 +63,44 @@ const students = [
   },
 ];
 
-// Sintaxis básica:
+// Vamos a recorrer el array usando sintaxis básica del for:
+console.log("FOR:");
 for (let i = 0; i < students.length; i++) {
-  // console.log(students[i]);
+  console.log(students[i]);
   // console.log(students[i].name);
   // console.log(students);
 }
 
 console.log("----------------");
 
-/* Sintaxis declarativa:
+/* Ahora vamos a recorrer ese mismos array usando la sintaxis declarativa del .forEach():
 
-OJO el metodo forEach() no retorna nada, osea que si necesitamos trabajar con el array debemos en una variable incluir esos datos.
+OJO el metodo forEach() no retorna nada, osea que si necesitamos trabajar con el array debemos en una variable incluir esos datos. Y por medio del metodo push() y incluir esos datos en ese array.
 
 */
+
+console.log("---forEach():---");
 const studentCouse = [];
 
 students.forEach((student, index, students) => {
-  // console.log(student);
+  console.log(student);
   // console.log(index);
   // console.log(students);
   // console.log(`name: ${student.name}`);
   // console.log(`course: ${student.course}`);
   // console.log(`${student.name} ${student.lastname} ${student.course}`);
-    studentCouse.push(student.name + " " + student.course);
+  studentCouse.push(student.name + " " + student.course);
 });
 
-console.log(studentCouse);
+// console.log(studentCouse);
 
 /*
+
 Podemos comprobar si un metodo devuelve a no valor poniendolo dentro de una variable asi:
 
 */
 let result = students.forEach((student, index, students) => {
-    return student.name;
+  return student.name;
 });
 
 console.log(result); // undefined
